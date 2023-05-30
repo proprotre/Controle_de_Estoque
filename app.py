@@ -2,14 +2,14 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 # Cria o engine de conexão com o banco de dados
-engine = create_engine('sqlite:///produtos.db')
+engine = create_engine("sqlite:///produtos.db")
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 session = Session()
 
 # Classe Produto para mapear a tabela do banco de dados
 class Produto(Base):
-    __tablename__ = 'produtos'
+    __tablename__ = "produtos"
     id = Column(Integer, primary_key=True)
     nome = Column(String)
     valor_compra = Column(Integer)
@@ -24,10 +24,13 @@ Base.metadata.create_all(engine)
 
 # Função para adicionar um produto
 def adicionar_produto(nome, valor_compra, valor_venda, quantidade):
-    produto = Produto(nome=nome, valor_compra=valor_compra, valor_venda=valor_venda, quantidade=quantidade)
-    session.add(produto)
-    session.commit()
-    print("Produto adicionado com sucesso!")
+    if nome and valor_compra and valor_venda and quantidade != "":
+        produto = Produto(nome=nome, valor_compra=valor_compra, valor_venda=valor_venda, quantidade=quantidade)
+        session.add(produto)
+        session.commit()
+        print("Produto adicionado com sucesso!")
+    else:
+        print("Você não pode adicionar valores vazios!")
 
 # Função para ler todos os produtos
 def ler_produtos():
@@ -46,13 +49,16 @@ def atualizar_produto():
             nome = input("Digite um novo nome: ")
             valor_compra = input("Digite um novo valor de compra: ")
             valor_venda = input("Digite um novo valor de venda: ")
-            quantidade = input("Digite uma nova quantidade: ")
-            produto.nome = nome
-            produto.valor_compra = valor_compra
-            produto.valor_venda = valor_venda
-            produto.quantidade = quantidade
-            session.commit()
-            print("Produto atualizado com sucesso!")
+            quantidade = input("Digite uma nova quantidade: ")         
+            if nome and valor_compra and valor_venda and quantidade != "":
+                produto.nome = nome
+                produto.valor_compra = valor_compra
+                produto.valor_venda = valor_venda
+                produto.quantidade = quantidade
+                session.commit()
+                print("Produto atualizado com sucesso!")
+            else:
+                print("Você não pode adicionar valores vazios!")
         else:
             print("Produto não encontrado!")
     except ValueError:
@@ -71,7 +77,7 @@ def excluir_produto():
             print("Produto não encontrado!")
     except ValueError:
         print("Valor Inválido!")
-# Função para solicitar produto
+# Função para solicitar um produto
 def solicitar_produto():
     nome = input("Digite o nome do produto: ")
     valor_compra = input("Digite o valor de compra: ")
