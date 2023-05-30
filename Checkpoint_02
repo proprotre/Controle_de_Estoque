@@ -1,0 +1,15 @@
+Cronograma do Desenvolvimento
+
+=============================
+
+Data de Início do Projeto: 20/05/2023
+Data de Fim do Projeto: 04/06/2023
+
+Tarefas/Requisitos:
+1. Definir a estrutura do banco de dados – 21/05/2023
+2. Implementar a classe Produto e o mapeamento com o banco de dados - 21/05/2023
+3. Desenvolver a função de adicionar um produto - 22/05/2023
+4. Desenvolver a função de ler todos os produtos - 24/05/2023
+5. Desenvolver a função de atualizar um produto - 26/05/2023
+6. Desenvolver a função de excluir um produto - 28/05/2023
+7. Criar a função de menu principal e interação com o usuário - 04/06/2023
