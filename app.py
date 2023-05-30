@@ -35,7 +35,7 @@ def ler_produtos():
     for produto in produtos:
         print(produto)
     if produtos == []:
-        print("Estoque sem produtos!")
+        print("Sem produtos no estoque!")
 
 # Função para atualizar um produto
 def atualizar_produto():
