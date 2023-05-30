@@ -1,1 +1,22 @@
+Cronograma de Desenvolvimento - Tarefas/Requisitos já concluídos:
+====================================================
 
+1. Definir a estrutura do banco de dados – Concluído em 21/05/2023
+2. Implementar a classe Produto e o mapeamento com o banco de dados - Concluído em 21/05/2023
+3. Desenvolver a função de adicionar um produto - Concluído em 22/05/2023
+4. Desenvolver a função de ler todos os produtos - Concluído em 24/05/2023
+5. Desenvolver a função de atualizar um produto - Concluído em 26/05/2023
+6. Desenvolver a função de excluir um produto - Concluído em 28/05/2023
+7. Criar a função de menu principal e interação com o usuário - Concluído em 04/06/2023
+
+
+Cronograma de Desenvolvimento - Front-end e Back-end 
+====================================================
+
+Front-end:
+1. Criar uma interface de usuário mais amigável - 05/06/2023
+2. Implementar a interação com o usuário por meio de uma GUI (Interface Gráfica do Usuário) - 06/06/2023
+
+Back-end:
+1. Refatorar e organizar o código em módulos separados - 07/06/2023
+2. Refatorar o código para receber os dados pela interface gráfica - 07/06/2023
