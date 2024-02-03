@@ -120,3 +120,6 @@ Neste projeto, foram aplicadas as seguintes práticas de código limpo:
 ## Padrão de Projeto de Software
 
 Neste projeto, foi utilizado o padrão de projeto de software conhecido como Active Record. O modelo "Produto" representa a tabela do banco de dados e possui os métodos para interação com os dados, como adicionar, atualizar e excluir produtos.
+
+## Autor
+Gabriel Badaró
